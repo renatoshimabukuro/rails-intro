@@ -1,0 +1,19 @@
+<h1>Contact us</h1>
+
+<h2>Who do you want to contact?</h2>
+<form action="/contact" method="get">
+  <label for="member">Please type a name...</label>
+  <input id="member" name="member" type="text" value="<%= params[:member] %>" placeholder="Charlie">
+
+  <input type="submit">
+</form>
+
+<%# <% members = ["Claire", "Toni", "Santi", "Sarah"] %>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member  %></li>
+  <% end %>
+</ol>
+<p>Test contact</p>
+<%= link_to("Back to home", root_path)  %>
